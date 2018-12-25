@@ -1,8 +1,7 @@
+package lotteryguesser;
+
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,22 +12,21 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LotteryGUI {
+class LotteryGUI {
 
-    JFrame mainframe;
-    HashMap<Integer, Integer> ballCounts;
-    HashMap<Integer, Integer> luckyCounts;
+    private HashMap<Integer, Integer> ballCounts;
+    private HashMap<Integer, Integer> luckyCounts;
 
-    JLabel[] ballLabels = new JLabel[5];
-    JLabel[] luckyLabels = new JLabel[2];
+    private JLabel[] ballLabels = new JLabel[5];
+    private JLabel[] luckyLabels = new JLabel[2];
 
-    public LotteryGUI(){
+    LotteryGUI(){
         init();
     }
 
     private void init() {
 
-        mainframe = new JFrame("Lottery Guesser");
+        JFrame mainframe = new JFrame("Lottery Guesser");
         Container contentPane = mainframe.getContentPane();
         contentPane.setLayout(new BorderLayout());
 
@@ -119,7 +117,7 @@ public class LotteryGUI {
         mainframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 
-    public void calculateMostCommon(){
+    private void calculateMostCommon(){
 
         ballCounts = new HashMap<>();
         luckyCounts = new HashMap<>();
