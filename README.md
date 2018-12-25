@@ -1,2 +1,3 @@
 # EuroMillionsGuesser
-Get the most commonly seen numbers from last 50 draws
+
+This gets the most commonly drawn balls (gray) and lucky balls (orange) from the last 50 Euro Millions draws.
